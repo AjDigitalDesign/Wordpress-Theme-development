@@ -1,19 +1,123 @@
-a {
-	color: $color__link;
+#mainNav {
+    ul>li>a {
+        color: $color_nav_link;
+    }
+}
 
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+.ajdigitaldesignNav .navbar-toggler:active,
+.ajdigitaldesignNav .navbar-toggler:focus {
+    outline: none;
+}
+
+.ajdigitaldesignNav>.container {
+    position: relative;
+}
+
+.ajdigitaldesignNav .navbar-toggler {
+    border: none;
+    color: #ffffff;
+    border-color: white;
+    cursor: pointer;
+    padding-right: 0;
+}
+
+.navbar-toggler span {
+    color: #ffffff;
+}
+
+.navbar-collapse li {
+    padding: 10px 0;
+    transition: all .3s ease;
+}
+
+.navbar-collapse.show li:last-child {
+    padding-bottom: 25px;
+}
+
+.ajdigitaldesignNav .navbar-toggler i {
+    font-size: 30px;
+}
+
+.ajdigitaldesignNav ul>li>a {
+    color: white !important;
+}
+
+.ajdigitaldesignNav ul>li>a.active {
+    color: white !important;
+}
+
+.ajdigitaldesignNav ul>li.cta-btn>a>span {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.ajdigitaldesignNav .nav-link {
+    font-size: 15px;
+    margin: 0 1.5em;
+    position: relative;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 0;
+}
+
+.ajdigitaldesignNav .nav-link:after,
+.ajdigitaldesignNav .nav-link:before {
+    content: "";
+    position: absolute;
+    top: 1.6em;
+    left: 0;
+    height: 2px;
+    background-color: #e64533;
+    width: 0;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.ajdigitaldesignNav .nav-link:before {
+    top: 2em;
+}
+
+.ajdigitaldesignNav .nav-link:hover:after,
+.ajdigitaldesignNav .nav-link:hover:before {
+    display: inline;
+}
+
+.ajdigitaldesignNav .active .nav-link:after,
+.ajdigitaldesignNav .nav-link:hover:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.ajdigitaldesignNav .active .nav-link:before,
+.ajdigitaldesignNav .nav-link:hover:before {
+    opacity: 1;
+    transition-delay: 400ms;
+    width: 18%;
+}
+
+a {
+    color: $color__link;
+    &:visited {
+        color: $color__link-visited;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color__link-hover;
+    }
+    &:focus {
+        outline: thin dotted;
+    }
+    &:hover,
+    &:active {
+        outline: 0;
+    }
+}
+
+button {
+    &:focus {
+        outline: none !important;
+    }
 }

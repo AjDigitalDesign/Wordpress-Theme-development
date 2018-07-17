@@ -127,6 +127,9 @@ function ajdigitaldesign_scripts() {
 	// Enqueue FontAwesme
 	wp_enqueue_style('ajdigitaldesign-FontAwesome-css', get_template_directory_uri() . '/assets/css/all.css', array(), '510');
 
+	// Enqueue Hamburger Menu
+	wp_enqueue_style('ajdigitaldesign-menu', get_template_directory_uri() . '/assets/css/hamburgers.min.css', array(), '510');
+
 	/// Enqueue Google Fonts Lora and PlayFair Display
 	wp_enqueue_style('ajdigitaldesign-GoogleFonts', 'https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display');
 
@@ -146,6 +149,8 @@ function ajdigitaldesign_scripts() {
 	wp_enqueue_script( 'ajdigitaldesign-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ajdigitaldesign-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script('ajdigitaldesign-mainJs', get_template_directory_uri() . '/assets/js/main.js', array(), '', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
