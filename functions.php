@@ -120,7 +120,28 @@ add_action( 'widgets_init', 'ajdigitaldesign_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ajdigitaldesign_scripts() {
+
+	// Enqueue Boostrap CSS
+	wp_enqueue_script('ajdigitaldesign-Bootstrap-css', get_template_directory_uri(). '/assets/css/bootstrap.min.css', array(), '412');
+
+	// Enqueue FontAwesme
+	wp_enqueue_script('ajdigitaldesign-FontAwesome-css', get_template_directory_uri() . '/assets/css/all.css', array(), '510');
+
+	/// Enqueue Google Fonts Lora and PlayFair Display
+	wp_enqueue_script('ajdigitaldesign-GoogleFonts', 'https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display');
+
 	wp_enqueue_style( 'ajdigitaldesign-style', get_stylesheet_uri() );
+
+	//Call Wordpress Default Jquery Library
+	wp_enqueue_script('Jquery');
+
+	// wp_enqueue_script('ajdigitaldesign-jquery', get_template_directory_uri() . '/assets/js/jquery-3.3.1.min.js', array(), '412', true);
+
+	//Bootstrap.min.js file
+	wp_enqueue_script('ajdigitaldesign-BootstrapJs', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), '412', true);
+
+	//FontSweaome
+	wp_enqueue_script('ajdigitaldesign-FontAwesomeJS', get_template_directory_uri() . '/assets/js/all.js', array('jquery'), '510', true);
 
 	wp_enqueue_script( 'ajdigitaldesign-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
