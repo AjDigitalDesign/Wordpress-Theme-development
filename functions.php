@@ -122,13 +122,13 @@ add_action( 'widgets_init', 'ajdigitaldesign_widgets_init' );
 function ajdigitaldesign_scripts() {
 
 	// Enqueue Boostrap CSS
-	wp_enqueue_script('ajdigitaldesign-Bootstrap-css', get_template_directory_uri(). '/assets/css/bootstrap.min.css', array(), '412');
+	wp_enqueue_style('ajdigitaldesign-Bootstrap-css', get_template_directory_uri(). '/assets/css/bootstrap.min.css', array(), '412');
 
 	// Enqueue FontAwesme
-	wp_enqueue_script('ajdigitaldesign-FontAwesome-css', get_template_directory_uri() . '/assets/css/all.css', array(), '510');
+	wp_enqueue_style('ajdigitaldesign-FontAwesome-css', get_template_directory_uri() . '/assets/css/all.css', array(), '510');
 
 	/// Enqueue Google Fonts Lora and PlayFair Display
-	wp_enqueue_script('ajdigitaldesign-GoogleFonts', 'https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display');
+	wp_enqueue_style('ajdigitaldesign-GoogleFonts', 'https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display');
 
 	wp_enqueue_style( 'ajdigitaldesign-style', get_stylesheet_uri() );
 

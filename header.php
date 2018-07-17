@@ -24,6 +24,23 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ajdigitaldesign' ); ?></a>
 
+	<!--navigation section-->
+	<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fix-top">
+		<div class="container">
+			<a class="navbar-brand">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo.png" alt="logo">
+			</a>
+		</div>
+
+     
+
+	</nav>
+
+
+
+
+
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
