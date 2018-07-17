@@ -1,0 +1,111 @@
+header.masthero {
+    position: relative;
+    padding-top: 7rem;
+    background-image: url('assets/images/header-bg.jpg');
+    background-repeat: no-repeat;
+    padding-bottom: calc(10rem - 56px);
+    background-position: center center;
+    background-size: cover;
+    @include background-cover;
+    color: $color_white;
+    z-index: 2;
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(14, 14, 14, 0.729);
+        z-index: -1;
+    }
+    .hero-content {
+        position: relative;
+        h6.welcome {
+            font-weight: 600;
+            color: $color_red;
+            padding-top: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+        h1.hereo-title {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 12px 0;
+        }
+        p.lead-text {
+            font-size: 1.2em;
+            padding-right: 10px;
+        }
+    }
+    .subscribe {
+        position: relative;
+        form {
+            label {
+                display: none;
+            }
+            input.subscribe {
+                box-shadow: none;
+                border: 0;
+                border-top-left-radius: 27px;
+                border-top-right-radius: 27px;
+                border-bottom-left-radius: 27px;
+                border-bottom-right-radius: 27px; // width: 100%;
+                height: 52px;
+                text-shadow: none;
+                padding-left: 20px;
+                padding-right: 130px;
+                overflow: hidden;
+                outline: none;
+                &::-webkit-input-placeholder {
+                    color: $color_red;
+                }
+                &:focus {
+                    border: none !important;
+                }
+            }
+            button.subscribe-btn {
+                height: 52px;
+                width: 120px;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                left: 210px;
+                border-top-right-radius: 27px;
+                border-bottom-right-radius: 27px;
+                border-bottom-left-radius: 27px;
+                border-top-left-radius: 27px;
+                box-shadow: none;
+                border: none !important;
+                background-color: $color_red;
+                color: $color_white;
+                text-transform: uppercase;
+                font-weight: 300;
+            }
+        }
+    }
+    @media(min-width: 768px) {
+        .hero-content {
+            padding-top: 2rem;
+            width: 600px;
+            padding-bottom: 2rem;
+        }
+    }
+    @media(min-width: 992px) {
+        height: 90vh;
+        min-height: 650;
+        .hero-content {
+            padding-top: 5rem;
+            width: 600px;
+            padding-bottom: 3rem;
+        }
+    }
+    @media(min-width: 1200px) {
+        .hero-content {
+            padding-top: 12rem;
+            width: 600px;
+        }
+    }
+}

@@ -58,7 +58,29 @@
 				</ul>
 			</div>
 		</div>
-    </nav>
+	</nav>
+
+	<header class="masthero">
+		<div class="container">
+			<div class="hero-content">
+				<div class="here-content-inner">
+					<h6 class="welcome">Welcome To</h6>
+					<h1 class="hereo-title">Aj Digital Design</h1>
+					<p class="lead-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate delectus? Non nesciunt molestias ipsum corrupti. Obcaecati,
+						magnam veritatis.
+					</p>
+					<div class="subscribe">
+						<form>
+							<label for=""newsletter>newsletter</label>
+							<input type="text" class="control-form subscribe" placeholder="YourEmail@me.com">
+							<button type="submit" class="control-form subscribe-btn">Subscribe</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</header>
 
 
 
