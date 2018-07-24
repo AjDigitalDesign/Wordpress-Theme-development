@@ -1,0 +1,45 @@
+#services {
+    .no-gutters>[class*=col-] {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    .col-section-col-3 {
+        box-shadow: 0 15px 20px 0 rgba(70, 69, 69, 0.144);
+    }
+    .service-single {
+        background-color: $color_services_bg;
+        border: 1px solid $color_services_bg;
+        border-radius: 0;
+        position: relative;
+        text-align: center;
+        color: $color_white;
+        padding: 1.5rem 1.5rem;
+        .card-body {
+            padding: 3rem 1rem;
+            span.service-icon {
+                display: inline-block;
+                position: relative;
+                margin-bottom: 1.78571rem !important;
+                border-width: 2px !important;
+                border-style: solid;
+                box-shadow: 0 15px 20px 0 rgba(117, 117, 117, 0.06);
+                text-align: center;
+                transition: all .2s ease-in-out;
+                padding: 18px;
+                svg.svg-inline--fa {
+                    color: $color_red;
+                    font-size: 1.5rem;
+                }
+            }
+            h3.section-title {
+                text-transform: capitalize;
+                font-weight: 400;
+            }
+        }
+        .card-footer {
+            background: transparent;
+            border: 0 !important;
+            padding: 2rem 2.5rem;
+        }
+    }
+}

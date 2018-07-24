@@ -60,24 +60,25 @@
 		</div>
 	</nav>
 
-	<header class="masthero">
-		<div class="container">
-			<div class="hero-content">
-				<div class="here-content-inner">
-					<h6 class="welcome">Welcome To</h6>
-					<h1 class="hereo-title">Aj Digital Design</h1>
-					<p class="lead-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate delectus? Non nesciunt molestias ipsum corrupti. Obcaecati,
-						magnam veritatis.
-					</p>
-					<div class="subscribe">
-						<form>
-							<label for=""newsletter>newsletter</label>
-							<input type="text" class="control-form subscribe" placeholder="YourEmail@me.com">
-							<button type="submit" class="control-form subscribe-btn">Subscribe</button>
-						</form>
+
+		<header id="masterheader">
+		<div class="container my-auto">
+			<div class="row">
+				<div class="main-content">
+					<div class="content-inner">
+						<h6 class="welcome">Welcome To</h6>
+						<h1 class="hero-title">Aj Digital Design</h1>
+						<p class="lead-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate delectus? Non nesciunt molestias ipsum corrupti. Obcaecati,
+							magnam veritatis.
+						</p>
+						<div class="input-group">
+							<input type="text" class="form-control subscribe-input" aria-label="email" placeholder="YourEmail@me.com">
+							<div class="input-group-append">
+								<button class="btn ubtn-primary" type="submit">Subscribe</button>
+							</div>
+						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</header>
@@ -87,35 +88,4 @@
 
 
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ajdigitaldesign_description = get_bloginfo( 'description', 'display' );
-			if ( $ajdigitaldesign_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ajdigitaldesign_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ajdigitaldesign' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

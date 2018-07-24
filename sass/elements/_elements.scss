@@ -1,34 +1,91 @@
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+*:after {
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-	overflow: hidden;
+    background: $color__background-body;
+    /* Fallback for when there is no custom background color defined. */
 }
 
 hr {
-	background-color: $color__background-hr;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+    background-color: $color__background-hr;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
 }
 
 @import "lists";
-
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
 }
 
 figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+    margin: 1em 0;
+    /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-top: 2px solid $color_red;
+    z-index: 9999;
+}
+
+// services button
+.btn-line {
+    text-transform: capitalize;
+    border: 2px solid $color_red;
+    font-size-adjust: 1.125rem;
+    white-space: normal;
+    position: relative;
+    padding: .75rem 1.2rem;
+    font-weight: 700;
+    background-color: transparent;
+    &:hover {
+        background-color: $color_light_red;
+    }
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    border-radius: 0;
+    transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-groups-top {
+    padding-top: 4.5rem;
+}
+
+.section-groups-bottom {
+    padding-bottom: 5rem;
 }
 
 @import "tables";
