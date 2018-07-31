@@ -932,6 +932,10 @@ button:focus {
 	padding: 2rem 2.5rem;
 }
 
+#aboutMe {
+	background-color: #f8f9fa;
+}
+
 #aboutMe .header-inner .subTitle {
 	display: block;
 	color: #a2a2a2;

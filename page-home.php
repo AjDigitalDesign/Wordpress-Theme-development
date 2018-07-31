@@ -119,81 +119,39 @@
     </div>
 </section>
 
-<section id="projects" class="gallery-block cards-gallery section-groups-top section-groups-bottom">
-        <div class="container">
-            <div class="heading">
-                <h3>Recent Projects</h3>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                        </div>
+<section id="projects" class="section-groups-top section-groups-bottom">
+    <div class="container">
+        <h3>Recent Projects</h3>
+        <hr class="header-divider">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cupiditate </p>
+
+
+        <div class="row">
+            <div class="col-md-4 col-lg-4 item">
+                <figure class="project-img">
+                    <img class="img-fluid w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
+                </figure>
+                <div class="project-info">
+                    <h4>Henry Couture Website</h4>
+                    <ul class="list-inline project-categories">
+                        <li class="list-inline-item">Web Design</li>
+                        <li class="list-inline-item">Web Development</li>
+                        <li class="list-inline-item">ECommerce</li>
+                        <li class="list-inline-item">WordPress</li>
+                    </ul>
+
+                    <div class="project-button">
+                        <button class="btn btn-primary btn-project">View Project</button>
                     </div>
                 </div>
             </div>
+
         </div>
-    </section>
+
+    </div><!-- container-->
+</section>
+
+
 
 <section id="testimonial-section" class="container-fluid section-groups-top section-groups-bottom">
         <div class="row">
@@ -319,11 +277,6 @@
 
     </div>
 </section>
-
-
-
-
-
 
 
  <?php get_footer(); ?>
