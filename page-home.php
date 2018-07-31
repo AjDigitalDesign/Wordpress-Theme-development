@@ -103,7 +103,7 @@
 
             <div class="col-md-5 g-mb-30">
                 <div class="image-container">
-                    <img class="img-fluid mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img1.png" alt="place holder">
+                    <img class=" mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img1.png" alt="place holder">
                     <div class="text-center">
                         <span class="more-info-arrow">
                             Learn more:
@@ -115,84 +115,210 @@
                 </div>
 
             </div><!--col-md-5-->
-
-
         </div>
     </div>
 </section>
 
-<section id="aboutMe" class="section-groups-top section-groups-bottom">
-    <div class="container">
-        <div class="header">
-            <div class="header-content">
+<section id="projects" class="gallery-block cards-gallery section-groups-top section-groups-bottom">
+        <div class="container">
+            <div class="heading">
                 <h3>Recent Projects</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             </div>
-        </div><!--header-->
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6><a href="#">Lorem Ipsum</a></h6>
+                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6><a href="#">Lorem Ipsum</a></h6>
+                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6><a href="#">Lorem Ipsum</a></h6>
+                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6><a href="#">Lorem Ipsum</a></h6>
+                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6><a href="#">Lorem Ipsum</a></h6>
+                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 transform-on-hover">
+                        <a class="lightbox" href="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
+                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg" alt="Card Image" class="card-img-top">
+                        </a>
+                        <div class="card-body">
+                            <h6><a href="#">Lorem Ipsum</a></h6>
+                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="testimonial-section" class="container-fluid section-groups-top section-groups-bottom">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <article class="project-single">
-                    <figure class="project-img">
-                        <img class="img-fluid mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project3.jpg" alt="place holder">
-                    </figure>
-                    <div class="project-info">
-                        <h4 class="project-title">
-                            <a class="a-title" href="#">Henry Couture Paris</a>
-                        </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <div class="col-md-8 col-center m-auto">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item active">
+                            <div class="img-box"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/testi1.jpg" alt=""></div>
+                            <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+                            <p class="overview blockquote-footer"><b>Paula Wilson</b>, Media Analyst</p>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="img-box"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/testi1.jpg" alt=""></div>
+                            <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+                            <p class="overview blockquote-footer"><b>Antonio Moreno</b>, Web Developer</p>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="img-box"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/testi1.jpg" alt=""></div>
+                            <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+                            <p class="overview blockquote-footer"><b>Michael Holz</b>, Seo Analyst</p>
+                        </div>
                     </div>
-                    <ul class="list-inline category-item">
-                        <li class="list-inline-item"><a hre="#">ECommerce</a></li>
-                        <li class="list-inline-item"><a hre="#">SASS</a></li>
-                        <li class="list-inline-item"><a hre="#">Wordpress</a></li>
-                    </ul>
-                </article>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <i class="fa fa-angle-left fa-fw"></i>
+                    </a>
+                    <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                        <i class="fa fa-angle-right fa-fw"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
 
-            </div><!--col-lg-4-->
+<section id="blog-section" class="section-groups-top section-groups-bottom">
+    <div class="container">
+        <div class=" heading mb-5">
+            <h3>Recent Blog Articles</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis quia soluta.</p>
+            <hr class="heading-divider">
+        </div>
 
-            <div class="col-lg-4 col-md-6">
-                <article class="project-single">
-                    <figure class="project-img">
-                        <img class="img-fluid mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project3.jpg" alt="place holder">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <article class="blog-single">
+                    <figure>
+                        <img class="w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project4.jpg">
+                        <ul class="list-inline blog-categories">
+                            <li class="list-inline-item category-list"><a href="#">Small Business</a></li>
+                            <li class="list-inline-item category-list"><a href="#">Freelance</a></li>
+                            <li class="list-inline-item category-list"><a href="#">PHP7</a></li>
+                        </ul>
                     </figure>
-                    <div class="project-info">
-                        <h4 class="project-title">
-                            <a class="a-title" href="#">Henry Couture Paris</a>
-                        </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                    <ul class="list-inline category-item">
-                        <li class="list-inline-item"><a hre="#">ECommerce</a></li>
-                        <li class="list-inline-item"><a hre="#">SASS</a></li>
-                        <li class="list-inline-item"><a hre="#">Wordpress</a></li>
-                    </ul>
-                </article>
-            </div><!--col-lg-4-->
 
-            <div class="col-lg-4 col-md-6">
-                <article class="project-single">
-                    <figure class="project-img">
-                        <img class="img-fluid mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project3.jpg" alt="place holder">
+                    <div class="blog-single-content">
+                        <ul class="list-inline blog-info">
+                            <li class="list-inline-item category-list"><i class="fas fa-user"></i>By: <a href="#">Aj Jardiah Jr</a></li>
+                            <li class="list-inline-item category-list"><i class="fas fa-calendar"></i><a href="#">July 29, 2018</a></li>
+                            <li class="list-inline-item category-list"><i class="fas fa-comment"></i><a href="#">23</a></li>
+                        </ul>
+                        <h4><a href="#">Why Small Business need a website</a></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at atque debitis dicta eveniet harum in, inventore ipsa ipsum iure </p>
+
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <article class="blog-single">
+                    <figure>
+                        <img class="w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project4.jpg">
+                        <ul class="list-inline blog-categories">
+                            <li class="list-inline-item category-list"><a href="#">Small Business</a></li>
+                            <li class="list-inline-item category-list"><a href="#">Freelance</a></li>
+                            <li class="list-inline-item category-list"><a href="#">PHP7</a></li>
+                        </ul>
                     </figure>
-                    <div class="project-info">
-                        <h4 class="project-title">
-                            <a class="a-title" href="#">Henry Couture Paris</a>
-                        </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                    <ul class="list-inline category-item">
-                        <li class="list-inline-item"><a hre="#">ECommerce</a></li>
-                        <li class="list-inline-item"><a hre="#">SASS</a></li>
-                        <li class="list-inline-item"><a hre="#">Wordpress</a></li>
-                    </ul>
-                </article>
 
-            </div><!--col-lg-4-->
-        </div><!--row-->
+                    <div class="blog-single-content">
+                        <ul class="list-inline blog-info">
+                            <li class="list-inline-item category-list"><i class="fas fa-user"></i>By: <a href="#">Aj Jardiah Jr</a></li>
+                            <li class="list-inline-item category-list"><i class="fas fa-calendar"></i><a href="#">July 29, 2018</a></li>
+                            <li class="list-inline-item category-list"><i class="fas fa-comment"></i><a href="#">23</a></li>
+                        </ul>
+                        <h4><a href="#">Why Small Business need a website</a></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at atque debitis dicta eveniet harum in, inventore ipsa ipsum iure </p>
+
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <article class="blog-single">
+                    <figure>
+                        <img class="w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project4.jpg">
+                        <ul class="list-inline blog-categories">
+                            <li class="list-inline-item category-list"><a href="#">Small Business</a></li>
+                            <li class="list-inline-item category-list"><a href="#">Freelance</a></li>
+                            <li class="list-inline-item category-list"><a href="#">PHP7</a></li>
+                        </ul>
+                    </figure>
+
+                    <div class="blog-single-content">
+                        <ul class="list-inline blog-info">
+                            <li class="list-inline-item category-list"><i class="fas fa-user"></i>By: <a href="#">Aj Jardiah Jr</a></li>
+                            <li class="list-inline-item category-list"><i class="fas fa-calendar"></i><a href="#">July 29, 2018</a></li>
+                            <li class="list-inline-item category-list"><i class="fas fa-comment"></i><a href="#">23</a></li>
+                        </ul>
+                        <h4><a href="#">Why Small Business need a website</a></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at atque debitis dicta eveniet harum in, inventore ipsa ipsum iure </p>
+
+                    </div>
+                </article>
+            </div>
+        </div>
 
     </div>
 </section>
-
 
 
 

@@ -974,72 +974,156 @@ button:focus {
 	font-weight: 600;
 }
 
-#project-main {
-	background-color: #f5f5f5;
+#projects {
+	background-color: #f7f7f7;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
-#project-main .header {
-	margin-bottom: 3.5rem !important;
-}
-
-#project-main .header .header-content h3 {
-	font-weight: 600;
+#projects .heading h3 {
 	text-transform: uppercase;
-	position: relative;
+	font-weight: 600;
+	text-rendering: optimizeLegibility;
+	margin-bottom: 40px;
 }
 
-#project-main .header .header-content h3::after {
-	content: "";
-	margin-bottom: 1.0rem;
-	width: 10rem;
-	border-top-width: 2px;
+#projects .card {
+	margin-bottom: 30px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+	transition: 0.4s ease;
+}
+
+#projects .card a {
+	text-decoration: none;
+}
+
+#projects .card img {
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+#projects .card .card-body {
+	text-align: center;
+	text-align: center;
+}
+
+#projects .card .card-body h6 a {
+	color: inherit;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+#projects .card .card-body h6 a:hover {
+	color: #fd6665;
+}
+
+#projects .card .card-body p.card-text {
+	color: #fff;
+}
+
+#projects .transform-on-hover:hover {
+	transform: translateY(-10px) scale(1.02);
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+#projects .transform-on-hover:hover .card-body:hover {
+	color: #fff;
+	background-color: #202125;
+}
+
+#projects .transform-on-hover:hover .card-body:hover p {
+	color: #fff !important;
+}
+
+#testimonial-section {
+	background-color: #202125;
+}
+
+#testimonial-section .col-center {
+	float: none !important;
+}
+
+#testimonial-section .col-center .carousel {
+	padding: 0 70px;
+}
+
+#testimonial-section .col-center .carousel .item {
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+	min-height: 290px;
+	padding-bottom: 60px;
+	text-rendering: optimizeLegibility;
+}
+
+#testimonial-section .col-center .carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 1px;
+	border: 2px solid #ff4948;
+	border-radius: 50%;
+}
+
+#testimonial-section .col-center .carousel .item .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+
+#testimonial-section .col-center .carousel .item .testimonial {
+	padding: 30px 0 10px;
+}
+
+#testimonial-section .col-center .carousel .item .overview {
+	font-style: italic;
+	color: #fff;
+}
+
+#testimonial-section .col-center .carousel .item .overview b {
+	text-transform: uppercase;
+	color: #ff4948;
+}
+
+#testimonial-section .col-center .carousel a.carousel-control {
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	top: 50%;
+	background-color: none;
+}
+
+#testimonial-section .col-center .carousel a.carousel-control svg.fa-fw {
+	font-size: 2.5rem;
+	line-height: 42px;
+	position: absolute;
 	display: inline-block;
-	border-top-style: solid;
-	border-color: #ff4948;
+	color: #ff4948 !important;
 }
 
-#project-main .project-single {
-	position: relative;
-	transition: all .3s ease;
-	position: relative;
-	max-width: 100%;
-	margin: 0;
-	overflow: hidden;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	transform: translateZ(0);
-	border-radius: .25rem !important;
+#testimonial-section .col-center .carousel a.carousel-control svg.fa-fw:hover {
+	color: #ff302f;
 }
 
-#project-main .project-single .project-img {
-	margin-bottom: 0;
-	position: relative;
+#testimonial-section .col-center .carousel .carousel-indicators {
+	bottom: 10px;
 }
 
-#project-main .project-single .project-img::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+#testimonial-section .col-center .carousel .carousel-indicators li, #testimonial-section .col-center .carousel .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 1px 3px;
+	border-radius: 50%;
 }
 
-#project-main .project-single .project-img img {
-	position: relative;
-	max-width: 100%;
-	margin: 0;
-	overflow: hidden;
+#testimonial-section .col-center .carousel .carousel-indicators li {
+	background-color: #fff;
+	border-color: transparent;
 }
 
-#project-main .project-single .project-img img::after {
-	background-color: rgba(0, 0, 0, 0.4) !important;
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+#testimonial-section .col-center .carousel .carousel-indicators li.active {
+	background: #ff4948 !important;
 }
 
 /*--------------------------------------------------------------

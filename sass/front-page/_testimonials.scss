@@ -1,0 +1,78 @@
+#testimonial-section{
+  background-color: $color_services_bg;
+  .col-center{
+    // margin: 0 auto;
+    float: none !important;
+    .carousel{
+      padding: 0 70px;
+      .item{
+        color: $color_white;
+        text-align: center;
+        overflow: hidden;
+        min-height: 290px;
+        padding-bottom: 60px;
+        text-rendering: optimizeLegibility;
+        .img-box{
+          width: 135px;
+          height: 135px;
+          margin: 0 auto;
+          background-color: $color_white;
+          padding: 1px;
+          border: 2px solid $color_red;
+          border-radius: 50%;
+          img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 50%;
+          }
+        }
+        .testimonial{
+          padding: 30px 0 10px;
+        }
+        .overview{
+          font-style: italic;
+          color: $color_white;
+          b{
+            text-transform: uppercase;
+            color: $color_red;
+          }
+        }
+      }
+      a.carousel-control{
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        top: 50%;
+        background-color: none;
+        svg.fa-fw{
+          font-size: 2.5rem;
+          line-height: 42px;
+          position: absolute;
+          display: inline-block;
+          color: $color_red !important;
+          &:hover{
+            color: darken($color: $color_red, $amount: 5);
+          }
+
+        }
+      }
+      .carousel-indicators{
+        bottom: 10px;
+      }
+      .carousel-indicators li, .carousel-indicators li.active{
+        width: 10px;
+        height: 10px;
+        margin: 1px 3px;
+        border-radius: 50%;
+      }
+      .carousel-indicators li{
+        background-color: $color_white;
+        border-color: transparent;
+      }
+      .carousel-indicators li.active{
+        background: $color_red !important;
+      }
+    }
+  }
+}
