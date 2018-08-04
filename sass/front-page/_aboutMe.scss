@@ -1,6 +1,7 @@
 #aboutMe {
     background-color: $about-bg;
     .header-inner {
+        margin-top: 20px;
         .subTitle {
             display: block;
             color: darken($very-light-gray, $amount: 10);
@@ -16,6 +17,46 @@
             padding-right: 0px;
             line-height: 1.5rem;
         }
+
+      .skills{
+        position: relative;
+        margin-bottom: 20px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .skill-section{
+         padding-bottom: 17px;
+        }
+        .skill-name{
+          position: relative;
+          span.skillsets{
+            position: relative;
+            font-size: .8rem;
+            display: inline-block;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-left: 5px;
+            padding-bottom: 5px;
+          }
+        }
+        .progress{
+          position: relative;
+          height: 12px;
+          background-color: black;
+
+
+          .progress-bar{
+            width: 100%;
+
+
+            &.bg-danger{
+              background-color: $color_red !important;
+            }
+          }
+
+        }
+      }
     }
     .image-container {
         img {
@@ -37,6 +78,12 @@
                     font-weight: 600;
                 }
             }
+        }
+    }
+
+    @media(min-width: 768px){
+        .about-content-area{
+            margin-top: 20px;
         }
     }
 }

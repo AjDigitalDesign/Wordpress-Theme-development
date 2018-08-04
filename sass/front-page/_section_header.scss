@@ -1,0 +1,36 @@
+.project-section-title{
+  padding-bottom: 35px;
+  h2{
+    color: $color_white;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  hr{
+    width: 10rem;
+    margin-top: 0;
+    border-top: 2px solid $color_red;
+    border-bottom: 2px solid $color_red;
+    padding-bottom: 2px;
+    background-color: transparent;
+  }
+  p{
+    color: $color_white;
+    text-align: center;
+
+  }
+}
+
+@media (min-width: 768px) {
+  .project-section-title{
+    p{
+      margin: 0 auto;
+      width: 600px;
+      text-align: center;
+      padding-bottom: 20px;
+
+    }
+  }
+
+}

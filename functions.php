@@ -47,10 +47,27 @@ if ( ! function_exists( 'ajdigitaldesign_setup' ) ) :
 			'menu-1' => esc_html__( 'Primary', 'ajdigitaldesign' ),
 		) );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
+
+        add_filter('nav_menu_css_class', 'add_classes_on_li', 1, 3);
+        function add_classes_on_li($classes, $item, $args)
+        {
+            $classes[] = 'nav-item';
+
+            return $classes;
+        }
+
+        add_filter('wp_nav_menu', 'add_classes_on_a');
+        function add_classes_on_a($ulclass)
+        {
+            return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+        }
+
+
+
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
 		add_theme_support( 'html5', array(
 			'search-form',
 			'comment-form',
@@ -74,11 +91,13 @@ if ( ! function_exists( 'ajdigitaldesign_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 100,
+			'width'       => 220,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+        add_image_size( 'portfolio_size', 900, 450 );
 	}
 endif;
 add_action( 'after_setup_theme', 'ajdigitaldesign_setup' );
@@ -145,6 +164,8 @@ function ajdigitaldesign_scripts() {
 
 	//FontSweaome
 	wp_enqueue_script('ajdigitaldesign-FontAwesomeJS', get_template_directory_uri() . '/assets/js/all.js', array('jquery'), '510', true);
+
+    wp_enqueue_script( 'ajdigitaldesign-staller', get_template_directory_uri() . '/assets/js/jquery.stellar.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ajdigitaldesign-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

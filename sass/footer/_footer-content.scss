@@ -1,0 +1,28 @@
+#footer-area{
+  background-color: $color_services_bg;
+  color: $color_white !important;
+  .copy-right{
+    margin: 0;
+    display: block;
+    padding-top: 15px;
+  }
+
+  .social-media{
+    position: relative;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    ul.social-icon{
+      li.icons-link{
+        padding-right: 30px;
+        a{
+          .svg-inline--fa{
+            font-size: 1.5rem !important;
+
+          }
+
+        }
+      }
+    }
+  }
+}

@@ -28,7 +28,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top ajdigitaldesignNav" id="mainNav">
       <div class="container">
         	<div class="navbar-brand" href="#page-top">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo.png" alt="logo">
+                <?php
+                if(function_exists('the_custom_logo')){
+                    the_custom_logo();
+                }
+                ?>
 			</div>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="hamburger hamburger--slider">
@@ -38,30 +42,24 @@
             	</span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav text-uppercase ml-auto">
-					<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#services">Services</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#about">About</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#team">Team</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-					</li>
-				</ul>
-			</div>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <?php
+              wp_nav_menu( array(
+                  'menu'           => 'menu-1',
+                  'theme_location'	=> 'menu-1',
+                  'container'	=> false,
+                  'menu_class'		=> 'navbar-nav text-uppercase ml-auto'
+              ) );
+              ?>
+          </div>
 		</div>
 	</nav>
 
-
-		<header id="masterheader">
+<!--
+    Display custom header only on the front page
+-->
+<?php if(is_front_page()) : ?>
+    <header id="masterheader" style="background-image: url(<?php echo( get_header_image() ); ?>);">
 		<div class="container my-auto">
 			<div class="row">
 				<div class="main-content">
@@ -82,6 +80,39 @@
 			</div>
 		</div>
 	</header>
+
+<?php else: ?>
+
+
+
+
+<?php while(have_posts()) : the_post(); ?>
+    <!--
+    check if about has feature image
+    grab the feature and size from the array using the get_attachment_image function and store it int he $page_page variable
+     if the page doesn't have a feature image, default to the static image
+    -->
+    <?php
+        $page_bg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+        $page_bg = $page_bg[0];
+    ?>
+    <?php if($page_bg) : ?>
+    <header id="section-header" style="background-image: url(<?php echo $page_bg; ?>);">
+        <?php else: ?>
+            <header id="section-header"">
+    <?php endif; ?>
+        <div class="container">
+            <div class="section-area text-center">
+                <h2><?php the_title(); ?></h2>
+                <hr class="header-divider">
+                <p>Lorem ipsum dolor sit amet, consectetur axime placeat quibusdam quo.</p>
+            </div>
+        </div><!--container-->
+    </header>
+    <?php endwhile; ?>
+<?php endif; ?>
+
+
 
 
 

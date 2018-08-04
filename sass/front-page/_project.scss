@@ -1,57 +1,64 @@
-#projects{
-  background-color: $color_bg;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  .heading{
-    h3{
-      text-transform: uppercase;
-      font-weight: 600;
-      text-rendering: optimizeLegibility;
-      margin-bottom: 40px;
-    }
-  }
-  .card{
-    margin-bottom: 30px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-    -webkit-transition: 0.4s ease;
-    -moz-transition: 0.4s ease;
-    -ms-transition: 0.4s ease;
-    -o-transition: 0.4s ease;
-    transition: 0.4s ease;
-    a{
-      text-decoration: none;
-    }
-    img{
-      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-    }
-    .card-body{
-      text-align: center;
-      text-align: center;
-      h6{
-        a{
-          color: inherit;
-          text-decoration: none;
-          text-transform: capitalize;
-          &:hover{
-            color: $color_light_red;
-          }
-        }
-      }
-      p.card-text{
-        color: $color_white;
-      }
-    }
-  }
-  .transform-on-hover:hover{
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
-    .card-body:hover{
-      color: $color_white;
-      background-color: $color_services_bg;
-      p{
-        color: $color_white !important;
-      }
-    }
-  }
+.work {
+  background-color: $color_services_bg;
+}
 
+.work .item {
+  padding: 1px;
+  margin: 0;
+}
+
+.work figure.effect-ruby img {
+  height: auto;
+  width: 100%;
+}
+
+.work .grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.work .grid figure:hover {
+  background: #000;
+}
+
+.work figure.effect-ruby h5 {
+  margin-top: 20%;
+  text-align: center;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  text-transform: capitalize;
+  font-weight: 600;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: inline-block;
+  color: $color_red;
+}
+
+.work figure.effect-ruby p {
+  font-size: 16px;
+  text-transform: capitalize;
+  border: none;
+  padding: 0;
+  margin: 5px 0px;
+  color: #fff;
+}
+
+.work figure.effect-ruby p strong {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.work .item:hover figure.effect-ruby h5 {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-transition: .3s;
+  transition: .3s;
 }

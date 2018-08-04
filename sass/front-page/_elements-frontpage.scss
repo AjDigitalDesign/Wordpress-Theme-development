@@ -1,0 +1,39 @@
+.section-header{
+  h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    padding:0;
+    margin: 0;
+    display: inline-block;
+  }
+  hr{
+    width: 190px;
+    position: relative;
+    display: block;
+    margin-left: 0;
+    border-color: $color_red;
+    background-color: transparent;
+    height: 2px;
+    margin-top: 5px;
+    border-bottom: 2px solid $color_red;
+    border-top: 2px solid $color_red;
+  }
+  p{
+    position: relative;
+    display: block;
+    margin-top: -10px;
+    padding: 0;
+  }
+
+}
+
+@media (min-width: 992px){
+  .section-header{
+    padding-bottom: 30px;
+    margin: 20px 0;
+    P{
+      width: 530px;
+      padding-right: 20px;
+    }
+  }
+}

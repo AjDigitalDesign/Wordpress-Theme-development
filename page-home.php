@@ -14,7 +14,7 @@
  */
 
  get_header()  ?>
-
+<?php while(have_posts()) : the_post(); ?>
  <!--Services -->
 <section id="services">
     <div class="container-fluid px-0">
@@ -89,25 +89,84 @@
 <section id="aboutMe" class="section-groups-top section-groups-bottom">
     <div class="container">
         <div class="row">
-            <div class="col-md-7 g-mb-30">
-                <div class="g-mb-20 header-inner">
-                    <span class="subTitle">Welcome, my name is:</span>
-                    <h3 class="about-title">Aj Jardiah Jr</h3>
-                    <p class="">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque minima iure, veritatis deserunt odit eius repudiandae cum, officiis maiores deleniti quidem.
-                        Perspiciatis, porro! Facere est numquam error accusantium quam! Aut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non similique ea iure esse, id
-                         maxime fugiat eius quam quibusdam suscipit, delectus animi, fugit eveniet ut. Non fugit consequuntur eligendi.
-                    </p>
-                </div>
-            </div>
+            <?php
+            // WP_query to display content from the about me page
+            $args = array(
+                'pagename'  => 'about'
+            );
+            ?>
+            <?php $aboutUs = new WP_Query($args); while($aboutUs->have_posts()): $aboutUs->the_post(); ?>
 
+            <div class="col-md-7 g-mb-30 about-content-area">
+
+                <div class="g-mb-20 header-inner">
+                    <?php
+                    //store the subtitle and developer's name in a variable
+                    $substile = get_field('page_greeting_title');
+                    $developer_name = get_field('developers_name');
+                    ?>
+                    <?php if($substile) : ?>
+                        <span class="subTitle"><?php echo $substile; ?></span>
+                    <?php endif; ?>
+
+                    <?php if($developer_name) : ?>
+                        <h3 class="about-title"><?php echo $developer_name; ?></h3>
+                    <?php endif; ?>
+                    <p class=""><?php the_excerpt(); ?></p>
+
+                    <div class="skills">
+                        <div class="skill-section">
+                            <div class="skill-name">
+                                <span class="skillsets">Html5/CSS</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 90%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                        </div>
+                        <div class="skill-section">
+                            <div class="skill-name">
+                                <span class="skillsets">WordPress</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 85%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">85%</div>
+                            </div>
+                        </div>
+                        <div class="skill-section">
+                            <div class="skill-name">
+                                <span class="skillsets">PHP</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+                        <div class="skill-section">
+                            <div class="skill-name">
+                                <span class="skillsets">Javascript/Jquery</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
             <div class="col-md-5 g-mb-30">
                 <div class="image-container">
-                    <img class=" mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img1.png" alt="place holder">
+                <?php
+                    $developer_headshot = get_field('developer_headshot');
+                    $developer_headshot_size = 'full';
+                    ?>
+                    <?php if(!empty($developer_headshot)) : ?>
+                        <img class=" mb-4" src="<?php echo $developer_headshot['url'] ?>" alt="place holder">
+                    <?php else: ?>
+                        <img class=" mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img1.png" alt="place holder">
+                <?php endif; ?>
                     <div class="text-center">
                         <span class="more-info-arrow">
                             Learn more:
-                            <a class="-g-links" href="#">about me
+                            <a class="-g-links" href="<?php the_permalink(); ?>">about me
                                 <i class="fa fa-arrow-circle-right"></i>
                             </a>
                         </span>
@@ -115,43 +174,141 @@
                 </div>
 
             </div><!--col-md-5-->
+            <?php endwhile; ?>
         </div>
     </div>
 </section>
 
-<section id="projects" class="section-groups-top section-groups-bottom">
-    <div class="container">
-        <h3>Recent Projects</h3>
-        <hr class="header-divider">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cupiditate </p>
-
-
+<!-- START WORK DESIGN AREA -->
+<section id="work" class="work section-groups-top section-groups-bottom">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-lg-4 item">
-                <figure class="project-img">
-                    <img class="img-fluid w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img5.jpg">
-                </figure>
-                <div class="project-info">
-                    <h4>Henry Couture Website</h4>
-                    <ul class="list-inline project-categories">
-                        <li class="list-inline-item">Web Design</li>
-                        <li class="list-inline-item">Web Development</li>
-                        <li class="list-inline-item">ECommerce</li>
-                        <li class="list-inline-item">WordPress</li>
-                    </ul>
-
-                    <div class="project-button">
-                        <button class="btn btn-primary btn-project">View Project</button>
-                    </div>
+            <div class="col-sm-12">
+                <div class="project-section-title">
+                    <h2>featured works.</h2>
+                    <hr class="section-divider">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi at cum deleniti est necessitatibus officiis quisquam tempore! Expedita, fugiat.</p>
                 </div>
             </div>
-
         </div>
+        <div class="work-inner">
+            <div class="row work-posts grid no-gutters">
+                <!-- START SINGLE WORK DESIGN AREA -->
+                <div class="col-md-4 col-sm-6 mix webdesign">
+                    <div class="item">
+                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
+                            <figure class="effect-ruby">
+                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
+                                <figcaption>
+                                    <h5>web development</h5>
+                                    <p>project one</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <!-- END SINGLE WORK DESIGN AREA -->
 
-    </div><!-- container-->
+                <!-- START SINGLE WORK DESIGN AREA -->
+                <div class="col-md-4 col-sm-6 mix webdesign">
+                    <div class="item">
+                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
+                            <figure class="effect-ruby">
+                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
+                                <figcaption>
+                                    <h5>web development</h5>
+                                    <p>project one</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <!-- END SINGLE WORK DESIGN AREA -->
+
+                <!-- START SINGLE WORK DESIGN AREA -->
+                <div class="col-md-4 col-sm-6 mix webdesign">
+                    <div class="item">
+                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
+                            <figure class="effect-ruby">
+                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
+                                <figcaption>
+                                    <h5>web development</h5>
+                                    <p>project one</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <!-- END SINGLE WORK DESIGN AREA -->
+
+                <!-- START SINGLE WORK DESIGN AREA -->
+                <div class="col-md-4 col-sm-6 mix webdesign">
+                    <div class="item">
+                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
+                            <figure class="effect-ruby">
+                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
+                                <figcaption>
+                                    <h5>web development</h5>
+                                    <p>project one</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <!-- END SINGLE WORK DESIGN AREA -->
+
+                <!-- START SINGLE WORK DESIGN AREA -->
+                <div class="col-md-4 col-sm-6 mix webdesign">
+                    <div class="item">
+                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
+                            <figure class="effect-ruby">
+                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
+                                <figcaption>
+                                    <h5>web development</h5>
+                                    <p>project one</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <!-- END SINGLE WORK DESIGN AREA -->
+                <!-- START SINGLE WORK DESIGN AREA -->
+                <div class="col-md-4 col-sm-6 mix webdesign">
+                    <div class="item">
+                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
+                            <figure class="effect-ruby">
+                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
+                                <figcaption>
+                                    <h5>web development</h5>
+                                    <p>project one</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <!-- END SINGLE WORK DESIGN AREA -->
+
+            </div>
+        </div>
+    </div>
 </section>
+<!-- / END START WORK DESIGN AREA -->
 
-
+<!-- START CALL TO ACTION DESIGN AREA -->
+<section id="download" class="call-to-area" data-stellar-background-ratio="0.6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="call-to-area-text text-center">
+                    <h2>we can help you to grow up your online business</h2>
+                    <p>We offer a wide range of procedures to help you get the perfect smile</p>
+                    <a class="Naila-scroll btn btn-lg" href="#appoinment">contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / END CALL TO ACTION DESIGN AREA -->
 
 <section id="testimonial-section" class="container-fluid section-groups-top section-groups-bottom">
         <div class="row">
@@ -193,90 +350,133 @@
         </div>
 </section>
 
-<section id="blog-section" class="section-groups-top section-groups-bottom">
+<section id="latest-blog-area" class="section-groups-top section-groups-bottom">
     <div class="container">
-        <div class=" heading mb-5">
-            <h3>Recent Blog Articles</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis quia soluta.</p>
-            <hr class="heading-divider">
+        <div class="project-section-title">
+            <h2>Latest Blog</h2>
+            <hr class="section-divider">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi at cum deleniti est necessitatibus officiis quisquam tempore! Expedita, fugiat.</p>
         </div>
 
         <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <article class="blog-single">
-                    <figure>
-                        <img class="w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project4.jpg">
-                        <ul class="list-inline blog-categories">
-                            <li class="list-inline-item category-list"><a href="#">Small Business</a></li>
-                            <li class="list-inline-item category-list"><a href="#">Freelance</a></li>
-                            <li class="list-inline-item category-list"><a href="#">PHP7</a></li>
-                        </ul>
-                    </figure>
-
-                    <div class="blog-single-content">
-                        <ul class="list-inline blog-info">
-                            <li class="list-inline-item category-list"><i class="fas fa-user"></i>By: <a href="#">Aj Jardiah Jr</a></li>
-                            <li class="list-inline-item category-list"><i class="fas fa-calendar"></i><a href="#">July 29, 2018</a></li>
-                            <li class="list-inline-item category-list"><i class="fas fa-comment"></i><a href="#">23</a></li>
-                        </ul>
-                        <h4><a href="#">Why Small Business need a website</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at atque debitis dicta eveniet harum in, inventore ipsa ipsum iure </p>
-
+            <!--Start single blog item-->
+            <div class="col-md-4">
+                <div class="single-blog-item">
+                    <div class="img-holder">
+                        <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="Awesome Image">
+                        <div class="overlay-style-one">
+                            <div class="box">
+                            </div>
+                        </div>
+                        <div class="post-date">
+                            <h5>14 Aprl</h5>
+                        </div>
                     </div>
-                </article>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-                <article class="blog-single">
-                    <figure>
-                        <img class="w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project4.jpg">
-                        <ul class="list-inline blog-categories">
-                            <li class="list-inline-item category-list"><a href="#">Small Business</a></li>
-                            <li class="list-inline-item category-list"><a href="#">Freelance</a></li>
-                            <li class="list-inline-item category-list"><a href="#">PHP7</a></li>
+                    <div class="text-holder">
+                        <ul class="meta-info">
+                            <li><a href="#">by fletcher</a></li>
+                            <li><a href="#">Marketing</a></li>
                         </ul>
-                    </figure>
-
-                    <div class="blog-single-content">
-                        <ul class="list-inline blog-info">
-                            <li class="list-inline-item category-list"><i class="fas fa-user"></i>By: <a href="#">Aj Jardiah Jr</a></li>
-                            <li class="list-inline-item category-list"><i class="fas fa-calendar"></i><a href="#">July 29, 2018</a></li>
-                            <li class="list-inline-item category-list"><i class="fas fa-comment"></i><a href="#">23</a></li>
-                        </ul>
-                        <h4><a href="#">Why Small Business need a website</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at atque debitis dicta eveniet harum in, inventore ipsa ipsum iure </p>
-
+                        <a href="blog-single.html">
+                            <h3 class="blog-title">Retail banks wake up to digital</h3>
+                        </a>
+                        <div class="text">
+                            <p>know how to pursue pleasure rationally seds encounter consequences.</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="left float-left">
+                                <a href="#">Read More</a>
+                            </div>
+                            <div class="right float-right">
+                                <h5><span class="fas fa-comments"></span>15</h5>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
+            <!--End single blog item-->
 
-            <div class="col-sm-6 col-md-4">
-                <article class="blog-single">
-                    <figure>
-                        <img class="w-100" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/project4.jpg">
-                        <ul class="list-inline blog-categories">
-                            <li class="list-inline-item category-list"><a href="#">Small Business</a></li>
-                            <li class="list-inline-item category-list"><a href="#">Freelance</a></li>
-                            <li class="list-inline-item category-list"><a href="#">PHP7</a></li>
-                        </ul>
-                    </figure>
-
-                    <div class="blog-single-content">
-                        <ul class="list-inline blog-info">
-                            <li class="list-inline-item category-list"><i class="fas fa-user"></i>By: <a href="#">Aj Jardiah Jr</a></li>
-                            <li class="list-inline-item category-list"><i class="fas fa-calendar"></i><a href="#">July 29, 2018</a></li>
-                            <li class="list-inline-item category-list"><i class="fas fa-comment"></i><a href="#">23</a></li>
-                        </ul>
-                        <h4><a href="#">Why Small Business need a website</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias at atque debitis dicta eveniet harum in, inventore ipsa ipsum iure </p>
-
+            <!--Start single blog item-->
+            <div class="col-md-4">
+                <div class="single-blog-item">
+                    <div class="img-holder">
+                        <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="Awesome Image">
+                        <div class="overlay-style-one">
+                            <div class="box">
+                            </div>
+                        </div>
+                        <div class="post-date">
+                            <h5>14 Aprl</h5>
+                        </div>
                     </div>
-                </article>
+                    <div class="text-holder">
+                        <ul class="meta-info">
+                            <li><a href="#">by fletcher</a></li>
+                            <li><a href="#">Marketing</a></li>
+                        </ul>
+                        <a href="blog-single.html">
+                            <h3 class="blog-title">Retail banks wake up to digital</h3>
+                        </a>
+                        <div class="text">
+                            <p>know how to pursue pleasure rationally seds encounter consequences.</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="left float-left">
+                                <a href="#">Read More</a>
+                            </div>
+                            <div class="right float-right">
+                                <h5><span class="fas fa-comments"></span>15</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!--End single blog item-->
+
+            <!--Start single blog item-->
+            <div class="col-md-4">
+                <div class="single-blog-item">
+                    <div class="img-holder">
+                        <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="Awesome Image">
+                        <div class="overlay-style-one">
+                            <div class="box">
+                            </div>
+                        </div>
+                        <div class="post-date">
+                            <h5>14 Aprl</h5>
+                        </div>
+                    </div>
+                    <div class="text-holder">
+                        <ul class="meta-info">
+                            <li><a href="#">by fletcher</a></li>
+                            <li><a href="#">Marketing</a></li>
+                        </ul>
+                        <a href="blog-single.html">
+                            <h3 class="blog-title">Retail banks wake up to digital</h3>
+                        </a>
+                        <div class="text">
+                            <p>know how to pursue pleasure rationally seds encounter consequences.</p>
+                        </div>
+                        <div class="bottom">
+                            <div class="left float-left">
+                                <a href="#">Read More</a>
+                            </div>
+                            <div class="right float-right">
+                                <h5><span class="fas fa-comments"></span>15</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End single blog item-->
+
+
         </div>
-
     </div>
 </section>
+
+<?php endwhile; ?>
+
 
 
  <?php get_footer(); ?>
