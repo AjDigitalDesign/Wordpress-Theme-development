@@ -64,7 +64,7 @@
 			<div class="row">
 				<div class="main-content">
 					<div class="content-inner">
-						<h6 class="welcome">Welcome To</h6>
+						<h2 class="welcome">Welcome To</h2>
 						<h1 class="hero-title">Aj Digital Design</h1>
 						<p class="lead-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate delectus? Non nesciunt molestias ipsum corrupti. Obcaecati,
 							magnam veritatis.

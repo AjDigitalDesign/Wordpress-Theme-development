@@ -1,0 +1,31 @@
+#skillset{
+  .project-section-title{
+    h2{
+      color: $color__text-main;
+    }
+    p{
+      color: $color__text-main;
+    }
+  }
+  .skillset_btn{
+    padding-bottom: 30px;
+  }
+  .justify-content-between{
+    h6{
+      font-size: .9rem;
+    }
+  }
+  .general-progress-bar{
+    height: 2px;
+    line-height: inherit;
+    background-color: $color__text-main;
+    .progress-bar{
+      height: auto;
+      background-color: $color_main-red;
+      min-height: 0;
+    }
+  }
+
+
+
+}

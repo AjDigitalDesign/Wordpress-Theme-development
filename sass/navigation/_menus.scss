@@ -1,5 +1,5 @@
 #mainNav {
-    background-color: $nav_color_bg;
+    background-color: $color_nav_background;
     .navbar-brand {
         position: relative;
         padding: 0;
@@ -29,7 +29,7 @@
                 span.hamburger-inner,
                 span.hamburger-inner::before,
                 span.hamburger-inner::after {
-                    background-color: $color_red;
+                    background-color: $color_main-red;
                     height: 2px;
                     width: 100%;
                     border-radius: 0;
@@ -62,7 +62,7 @@
         &.navbar-shrink {
             padding-top: 0;
             padding-bottom: 0;
-            background-color: $nav_color_bg !important;
+            background-color: $color_nav_background !important;
             .navbar-brand {
                 padding: 12px 0;
             }

@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+
 }
 
 *,
@@ -11,6 +12,7 @@ html {
 
 body {
     background: $color__background-body;
+    height: 100%;
     /* Fallback for when there is no custom background color defined. */
 }
 
@@ -52,14 +54,14 @@ figure {
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    border-top: 2px solid $color_red;
+    border-top: 2px solid $color_main-red;
     z-index: 9999;
 }
 
 // services button
 .btn-line {
     text-transform: capitalize;
-    border: 2px solid $color_red;
+    border: 2px solid $color_main-red;
     font-size-adjust: 1.125rem;
     white-space: normal;
     position: relative;
@@ -67,7 +69,7 @@ figure {
     font-weight: 700;
     background-color: transparent;
     &:hover {
-        background-color: $color_light_red;
+        background-color: $color__link-hover;
     }
 }
 

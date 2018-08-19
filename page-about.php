@@ -55,47 +55,68 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<section id="myquote" class="section-groups-top section-groups-bottom">
+<section id="myquote" class="section-groups-top section-groups-bottom" data-stellar-background-ratio="0.6">
     <div class="container">
-        <div class="col-md-12">
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto beatae blanditiis culpa, cum cumque esse eveniet fuga harum minus nemo, non nostrum pariatur perferendis sequi similique soluta suscipit totam?</p>
-            </blockquote>
-            <cite> Aj Jardiah jr </cite>
-        </div>
-    </div>
-</section>
-<section id="process" class="section-groups-top section-groups-bottom">
-    <div class="container">
-        <div class="header-section text-center">
-            <h3>Project Process</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-            <hr class="header-divider">
-        </div>
         <div class="row">
-            <div class="col-md-3">
-                <span class="number">1</span>
-                <h5 class="steps">Planning</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae impedit in magnam maiores pariatur tempore.</p>
-            </div>
-            <div class="col-md-3">
-                <span class="number">1</span>
-                <h5 class="steps">Planning</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae impedit in magnam maiores pariatur tempore.</p>
-            </div>
-            <div class="col-md-3">
-                <span class="number">1</span>
-                <h5 class="steps">Planning</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae impedit in magnam maiores pariatur tempore.</p>
-            </div>
-            <div class="col-md-3">
-                <span class="number">1</span>
-                <h5 class="steps">Planning</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae impedit in magnam maiores pariatur tempore.</p>
+            <div class="col-md-12">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0"><i class="fas fa-quote-left"></i>Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime<i class="fas fa-quote-right"></i></p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
             </div>
         </div>
 
     </div>
 </section>
+<section id="skillset" class="section-groups-top section-groups-bottom">
+    <div class="container">
+        <div class="project-section-title">
+            <h2>Latest Blog</h2>
+            <hr class="section-divider">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi at cum deleniti est necessitatibus officiis quisquam tempore! Expedita, fugiat.</p>
+        </div><!--project-section-title-->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="mb-5 skillset-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquid aut autem beatae cupiditate deserunt dicta dignissimos ducimus eligendi exercitationem fuga harum hic id incidunt molestiae, nobis nostrum optio porro quae quaerat recusandae repudiandae sapiente soluta tempore velit voluptatum. Et ipsam molestiae molestias, nam porro qui quos sunt unde.</p>
+            </div>
+            <div class="skillset_btn">
+                <a class="btn btn-link btn-line">View My Work</a>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="mb-4">
+                <div class="d-flex justify-content-between">
+                    <h6>Web Design</h6>
+                    <span class="ml-auto">88%</span>
+                </div>
+                <div class="js-hr-progress-bar progress rounded-0 general-progress-bar">
+                    <div class="js-hr-progress-bar-indicator progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="d-flex justify-content-between">
+                    <h6>Web Design</h6>
+                    <span class="ml-auto">88%</span>
+                </div>
+                <div class="js-hr-progress-bar progress rounded-0 general-progress-bar">
+                    <div class="js-hr-progress-bar-indicator progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="d-flex justify-content-between">
+                    <h6>Web Design</h6>
+                    <span class="ml-auto">88%</span>
+                </div>
+                <div class="js-hr-progress-bar progress rounded-0 general-progress-bar">
+                    <div class="js-hr-progress-bar-indicator progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div><!--row-->
+    </div><!--container-->
+</section>
 <?php endwhile; ?>
 <?php get_footer(); ?>
+
+

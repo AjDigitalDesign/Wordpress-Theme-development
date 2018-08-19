@@ -7,8 +7,8 @@
         box-shadow: 0 15px 20px 0 rgba(70, 69, 69, 0.144);
     }
     .service-single {
-        background-color: $color_services_bg;
-        border: 1px solid $color_services_bg;
+        background-color: $color_dark_blue_bg;
+        border: 1px solid $color_dark_blue_bg;
         border-radius: 0;
         position: relative;
         text-align: center;
@@ -27,7 +27,7 @@
                 transition: all .2s ease-in-out;
                 padding: 18px;
                 svg.svg-inline--fa {
-                    color: $color_red;
+                    color: $color_main-red;
                     font-size: 1.5rem;
                 }
             }

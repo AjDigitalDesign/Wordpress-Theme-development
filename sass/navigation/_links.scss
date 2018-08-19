@@ -1,6 +1,6 @@
 #mainNav {
     ul>li>a {
-        color: $color_nav_link;
+        color: $color_white;
     }
 }
 
@@ -15,14 +15,14 @@
 
 .ajdigitaldesignNav .navbar-toggler {
     border: none;
-    color: #ffffff;
-    border-color: white;
+    color: $color_white;
+    border-color: $color_white;
     cursor: pointer;
     padding-right: 0;
 }
 
 .navbar-toggler span {
-    color: #ffffff;
+    color: $color_white;
 }
 
 .navbar-collapse li {
@@ -43,7 +43,7 @@
 }
 
 .ajdigitaldesignNav ul>li>a.active {
-    color: white !important;
+    color: $color_white !important;
 }
 
 .ajdigitaldesignNav ul>li.cta-btn>a>span {
@@ -105,7 +105,7 @@ a {
     &:hover,
     &:focus,
     &:active {
-        color: $color_light_red;
+        color: $color__link-hover;
     }
     &:focus {
         outline: 0;

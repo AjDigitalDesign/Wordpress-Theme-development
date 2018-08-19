@@ -86,229 +86,185 @@
     </div><!--container-->
 </section>
 
-<section id="aboutMe" class="section-groups-top section-groups-bottom">
+<section id="statement_cta" class="section-groups-top section-groups-bottom">
     <div class="container">
         <div class="row">
-            <?php
-            // WP_query to display content from the about me page
-            $args = array(
-                'pagename'  => 'about'
-            );
-            ?>
-            <?php $aboutUs = new WP_Query($args); while($aboutUs->have_posts()): $aboutUs->the_post(); ?>
-
-            <div class="col-md-7 g-mb-30 about-content-area">
-
-                <div class="g-mb-20 header-inner">
-                    <?php
-                    //store the subtitle and developer's name in a variable
-                    $substile = get_field('page_greeting_title');
-                    $developer_name = get_field('developers_name');
-                    ?>
-                    <?php if($substile) : ?>
-                        <span class="subTitle"><?php echo $substile; ?></span>
-                    <?php endif; ?>
-
-                    <?php if($developer_name) : ?>
-                        <h3 class="about-title"><?php echo $developer_name; ?></h3>
-                    <?php endif; ?>
-                    <p class=""><?php the_excerpt(); ?></p>
-
-                    <div class="skills">
-                        <div class="skill-section">
-                            <div class="skill-name">
-                                <span class="skillsets">Html5/CSS</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 90%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">90%</div>
-                            </div>
-                        </div>
-                        <div class="skill-section">
-                            <div class="skill-name">
-                                <span class="skillsets">WordPress</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 85%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">85%</div>
-                            </div>
-                        </div>
-                        <div class="skill-section">
-                            <div class="skill-name">
-                                <span class="skillsets">PHP</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">75%</div>
-                            </div>
-                        </div>
-                        <div class="skill-section">
-                            <div class="skill-name">
-                                <span class="skillsets">Javascript/Jquery</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-animated bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">75%</div>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="statement-cta text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                 </div>
-
             </div>
-            <div class="col-md-5 g-mb-30">
-                <div class="image-container">
-                <?php
-                    $developer_headshot = get_field('developer_headshot');
-                    $developer_headshot_size = 'full';
-                    ?>
-                    <?php if(!empty($developer_headshot)) : ?>
-                        <img class=" mb-4" src="<?php echo $developer_headshot['url'] ?>" alt="place holder">
-                    <?php else: ?>
-                        <img class=" mb-4" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/img1.png" alt="place holder">
-                <?php endif; ?>
-                    <div class="text-center">
-                        <span class="more-info-arrow">
-                            Learn more:
-                            <a class="-g-links" href="<?php the_permalink(); ?>">about me
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </a>
-                        </span>
-                    </div>
-                </div>
-
-            </div><!--col-md-5-->
-            <?php endwhile; ?>
         </div>
     </div>
 </section>
 
-<!-- START WORK DESIGN AREA -->
-<section id="work" class="work section-groups-top section-groups-bottom">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="project-section-title">
-                    <h2>featured works.</h2>
-                    <hr class="section-divider">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi at cum deleniti est necessitatibus officiis quisquam tempore! Expedita, fugiat.</p>
+<section id="seo-analaystic" class="section-groups-top section-groups-bottom">
+
+        <div class="row align-items-stretch no-gutters">
+            <div class="col-lg-5 planning-process-img"></div><!--col-lg-5-->
+            <div class="col-lg-7 align-self-center design-process-bg">
+                <div class="container">
+                    <div class="design-process">
+                        <div class="heading-section">
+                            <h3>Our Working Process</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <div class="media-img">
+                                        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/planning01.png">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Planning Process</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, sunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <div class="media-img">
+                                        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/analysis02.png">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Planning Process</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, sunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <div class="media-img">
+                                        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/coding03.png">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Planning Process</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, sunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <div class="media-img">
+                                        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/testing04.png">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Planning Process</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, sunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+            </div><!--col-lg-7-->
         </div>
-        <div class="work-inner">
-            <div class="row work-posts grid no-gutters">
-                <!-- START SINGLE WORK DESIGN AREA -->
-                <div class="col-md-4 col-sm-6 mix webdesign">
-                    <div class="item">
-                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
-                            <figure class="effect-ruby">
-                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
-                                <figcaption>
-                                    <h5>web development</h5>
-                                    <p>project one</p>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-                <!-- END SINGLE WORK DESIGN AREA -->
-
-                <!-- START SINGLE WORK DESIGN AREA -->
-                <div class="col-md-4 col-sm-6 mix webdesign">
-                    <div class="item">
-                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
-                            <figure class="effect-ruby">
-                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
-                                <figcaption>
-                                    <h5>web development</h5>
-                                    <p>project one</p>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-                <!-- END SINGLE WORK DESIGN AREA -->
-
-                <!-- START SINGLE WORK DESIGN AREA -->
-                <div class="col-md-4 col-sm-6 mix webdesign">
-                    <div class="item">
-                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
-                            <figure class="effect-ruby">
-                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
-                                <figcaption>
-                                    <h5>web development</h5>
-                                    <p>project one</p>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-                <!-- END SINGLE WORK DESIGN AREA -->
-
-                <!-- START SINGLE WORK DESIGN AREA -->
-                <div class="col-md-4 col-sm-6 mix webdesign">
-                    <div class="item">
-                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
-                            <figure class="effect-ruby">
-                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
-                                <figcaption>
-                                    <h5>web development</h5>
-                                    <p>project one</p>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-                <!-- END SINGLE WORK DESIGN AREA -->
-
-                <!-- START SINGLE WORK DESIGN AREA -->
-                <div class="col-md-4 col-sm-6 mix webdesign">
-                    <div class="item">
-                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
-                            <figure class="effect-ruby">
-                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
-                                <figcaption>
-                                    <h5>web development</h5>
-                                    <p>project one</p>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-                <!-- END SINGLE WORK DESIGN AREA -->
-                <!-- START SINGLE WORK DESIGN AREA -->
-                <div class="col-md-4 col-sm-6 mix webdesign">
-                    <div class="item">
-                        <a href="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" class="work-popup">
-                            <figure class="effect-ruby">
-                                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/project4.jpg" alt="image">
-                                <figcaption>
-                                    <h5>web development</h5>
-                                    <p>project one</p>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-                <!-- END SINGLE WORK DESIGN AREA -->
-
-            </div>
-        </div>
-    </div>
 </section>
-<!-- / END START WORK DESIGN AREA -->
 
-<!-- START CALL TO ACTION DESIGN AREA -->
-<section id="download" class="call-to-area" data-stellar-background-ratio="0.6">
+<section id="cta" class="section-groups-top section-groups-bottom">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="call-to-area-text text-center">
-                    <h2>we can help you to grow up your online business</h2>
-                    <p>We offer a wide range of procedures to help you get the perfect smile</p>
-                    <a class="Naila-scroll btn btn-lg" href="#appoinment">contact us</a>
+        <div class="row text-center">
+            <div class="col-lg-8">
+                <div class="cta-text">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut cum deserunt, dolor et modi praesentium quasi quod rerum similique!</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cta-button">
+                    <a class="btn btn-lg btn-link btn-line cta-btn">Get a quote</a>
                 </div>
             </div>
         </div>
     </div>
+
 </section>
-<!-- / END CALL TO ACTION DESIGN AREA -->
+
+<section id="portfolio" class="section-groups-top section-groups-bottom">
+    <div class="container">
+        <div class="project-section-title">
+            <h2>Our Latest Work</h2>
+            <hr class="section-divider">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi at cum deleniti est necessitatibus officiis quisquam tempore! Expedita, fugiat.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-lg-4 item">
+                <div class="portfolio-single transform-on-hover">
+                    <a href="">
+                        <img class="img-fluid" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/mpFashions.png">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h5>MPFashions</h5>
+                                <p class="list-category">Web Design, Web Development</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 item">
+                <div class="portfolio-single">
+                    <a href="">
+                        <img class="img-fluid" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/mpFashions.png">
+                        <div class="portfolio-overlay">
+                            <h5>MPFashions</h5>
+                            <p class="list-category">Web Design, Web Development</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 item">
+                <div class="portfolio-single">
+                    <a href="">
+                        <img class="img-fluid" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/mpFashions.png">
+                        <div class="portfolio-overlay">
+                            <h5>MPFashions</h5>
+                            <p class="list-category">Web Design, Web Development</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4 item">
+                <div class="portfolio-single">
+                    <a href="">
+                        <img class="img-fluid" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/mpFashions.png">
+                        <div class="portfolio-overlay">
+                            <h5>MPFashions</h5>
+                            <p class="list-category">Web Design, Web Development</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 item">
+                <div class="portfolio-single">
+                    <a href="">
+                        <img class="img-fluid" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/mpFashions.png">
+                        <div class="portfolio-overlay">
+                            <h5>MPFashions</h5>
+                            <p class="list-category">Web Design, Web Development</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 item">
+                <div class="portfolio-single">
+                    <a href="">
+                        <img class="img-fluid" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/mpFashions.png">
+                        <div class="portfolio-overlay">
+                            <h5>MPFashions</h5>
+                            <p class="list-category">Web Design, Web Development</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
 
 <section id="testimonial-section" class="container-fluid section-groups-top section-groups-bottom">
         <div class="row">

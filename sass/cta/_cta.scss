@@ -1,0 +1,25 @@
+#cta{
+  .cta-text{
+    p{
+      padding: 0 10px;
+    }
+  }
+  .cta-button{
+    .cta-btn{
+      color: $color_main-red;
+      border-width: 3px;
+      &:hover{
+        color: $color_white;
+      }
+    }
+  }
+
+
+
+
+
+}
+
+
+
+

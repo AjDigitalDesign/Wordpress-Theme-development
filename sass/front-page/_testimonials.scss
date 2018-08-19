@@ -1,5 +1,5 @@
 #testimonial-section{
-  background-color: $color_services_bg;
+  background-color: #555555;
   .col-center{
     // margin: 0 auto;
     float: none !important;
@@ -18,7 +18,7 @@
           margin: 0 auto;
           background-color: $color_white;
           padding: 1px;
-          border: 2px solid $color_red;
+          border: 2px solid $color_main-red;
           border-radius: 50%;
           img{
             width: 100%;
@@ -35,7 +35,7 @@
           color: $color_white;
           b{
             text-transform: uppercase;
-            color: $color_red;
+            color: $color_main-red;
           }
         }
       }
@@ -50,9 +50,9 @@
           line-height: 42px;
           position: absolute;
           display: inline-block;
-          color: $color_red !important;
+          color: $color_main-red !important;
           &:hover{
-            color: darken($color: $color_red, $amount: 5);
+            color: darken($color: $color_main-red, $amount: 5);
           }
 
         }
@@ -71,7 +71,7 @@
         border-color: transparent;
       }
       .carousel-indicators li.active{
-        background: $color_red !important;
+        background: $color_main-red !important;
       }
     }
   }
