@@ -58,59 +58,78 @@
 <!--
     Display custom header only on the front page
 -->
-<?php if(is_front_page()) : ?>
+<?php if(is_front_page()) { ?>
     <header id="masterheader" style="background-image: url(<?php echo( get_header_image() ); ?>);">
-		<div class="container my-auto">
-			<div class="row">
-				<div class="main-content">
-					<div class="content-inner">
-						<h2 class="welcome">Welcome To</h2>
-						<h1 class="hero-title">Aj Digital Design</h1>
-						<p class="lead-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate delectus? Non nesciunt molestias ipsum corrupti. Obcaecati,
-							magnam veritatis.
-						</p>
-						<div class="input-group">
-							<input type="text" class="form-control subscribe-input" aria-label="email" placeholder="YourEmail@me.com">
-							<div class="input-group-append">
-								<button class="btn ubtn-primary" type="submit">Subscribe</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+        <div class="container my-auto">
+            <div class="row">
+                <div class="main-content">
+                    <div class="content-inner">
+                        <h2 class="welcome">Welcome To</h2>
+                        <h1 class="hero-title">Aj Digital Design</h1>
+                        <p class="lead-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cupiditate delectus? Non nesciunt molestias ipsum corrupti. Obcaecati,
+                            magnam veritatis.
+                        </p>
+                        <div class="input-group">
+                            <input type="text" class="form-control subscribe-input" aria-label="email" placeholder="YourEmail@me.com">
+                            <div class="input-group-append">
+                                <button class="btn ubtn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<?php } elseif(is_home()) {?>
+    <?php
+    $posts_page = get_option( 'page_for_posts' );
+    $page_bg = wp_get_attachment_image_src(get_post_thumbnail_id($posts_page), 'full');
+    $page_bg = $page_bg[0];
+    ?>
+    <?php if($page_bg) : ?>
+        <header id="section-header" style="background-image: url(<?php echo $page_bg; ?>);">
+    <?php else: ?>
+        <header id="section-header"">
+    <?php endif; ?>
+    <div class="container">
+        <div class="section-area text-center">
+            <h2><?php single_post_title(); ?></h2>
+            <hr class="header-divider">
+            <p>Lorem ipsum dolor sit amet, consectetur axime placeat quibusdam quo.</p>
+        </div>
+    </div><!--container-->
+    </header>
 
-<?php else: ?>
-
-
-
-
-<?php while(have_posts()) : the_post(); ?>
+<?php } else { ?>
     <!--
     check if about has feature image
     grab the feature and size from the array using the get_attachment_image function and store it int he $page_page variable
      if the page doesn't have a feature image, default to the static image
     -->
+
     <?php
-        $page_bg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-        $page_bg = $page_bg[0];
+    $page_bg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+    $page_bg = $page_bg[0];
     ?>
     <?php if($page_bg) : ?>
-    <header id="section-header" style="background-image: url(<?php echo $page_bg; ?>);">
-        <?php else: ?>
-            <header id="section-header"">
+        <header id="section-header" style="background-image: url(<?php echo $page_bg; ?>);">
+    <?php else: ?>
+        <header id="section-header"">
     <?php endif; ?>
-        <div class="container">
-            <div class="section-area text-center">
-                <h2><?php the_title(); ?></h2>
-                <hr class="header-divider">
-                <p>Lorem ipsum dolor sit amet, consectetur axime placeat quibusdam quo.</p>
-            </div>
-        </div><!--container-->
+    <div class="container">
+        <div class="section-area text-center">
+            <h2><?php the_title(); ?></h2>
+            <hr class="header-divider">
+            <p>Lorem ipsum dolor sit amet, consectetur axime placeat quibusdam quo.</p>
+        </div>
+    </div><!--container-->
     </header>
-    <?php endwhile; ?>
-<?php endif; ?>
+<?php } ?>
+
+
+
+
+
 
 
 

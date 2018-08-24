@@ -1,0 +1,45 @@
+#ourservices{
+  .project-section-title{
+    h2{
+      color: black;
+    }
+    p{
+      color: $color__text-main;
+    }
+  }
+  .service-single{
+    position: relative;
+    margin-bottom: 30px;
+    .media{
+      .media-img{
+        position: relative;
+        padding-right: 15px;
+        img{
+          max-width: 104px;
+          max-height: 100px;
+        }
+      }
+      .media-body{
+        .btn-services{
+          margin-top: -15px;
+          .btn-service{
+            padding: 5px;
+            margin: 0;
+            font-weight: normal;
+            &:hover{
+              color: $color_white
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+  @media (min-width: 992px){
+    .service-single{
+      margin-bottom: 30px;
+    }
+  }
+}

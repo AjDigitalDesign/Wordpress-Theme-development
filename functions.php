@@ -98,6 +98,7 @@ if ( ! function_exists( 'ajdigitaldesign_setup' ) ) :
 		) );
 
         add_image_size( 'portfolio_size', 900, 450 );
+        add_image_size( 'post_single_size', 763, 342 );
 	}
 endif;
 add_action( 'after_setup_theme', 'ajdigitaldesign_setup' );

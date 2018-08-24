@@ -1,7 +1,9 @@
-.cta{
+.cta-services{
+  background-color: $color_dark_blue_bg;
   .cta-text{
     p{
       padding: 0 10px;
+      color: $color_white;
     }
   }
   .cta-button{

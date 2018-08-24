@@ -9,7 +9,42 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="blog-item-one">
+    <div class="image-box">
+        <?php if(has_post_thumbnail()) { ?>
+        <figure>
+            <a href="blog-single.html">
+                <?php the_post_thumbnail(); ?>
+            </a>
+        </figure>
+        <?php }?>
+        <div class="content-text clearfix">
+
+            <a href="blog-single.html">
+                <?php
+                    if ( is_singular() ) :
+                        the_title( '<h5>', '</h1>' );
+                    else :
+                        the_title( '<h5><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif; ?>
+            </a>
+            <?php if ( 'post' === get_post_type() ) : ?>
+                <ul class="text-left">
+                    <li><i class="fa far fa-clock"></i><?php the_date(); ?></li>
+                    <li><i class="fa fa-user"></i>By <?php the_author(); ?></li>
+                    <li><i class="fa fa-comment"></i>Comment <span><?php comments_number(0, 1, '%'); ?></span></li>
+                    <li><i class="fa fa-thumbs-up"></i>Like <span>(53)</span></li>
+                </ul>
+            <P><?php the_excerpt(); ?></P>
+            <?php endif; ?>
+            <div class="link-btn">
+                <a href="blog-single.html">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+</div><!--blog-item-one-->
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :

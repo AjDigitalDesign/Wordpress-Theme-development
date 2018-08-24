@@ -71,7 +71,7 @@ get_header(); ?>
 <section id="skillset" class="section-groups-top section-groups-bottom">
     <div class="container">
         <div class="project-section-title">
-            <h2>Latest Blog</h2>
+            <h2>My Passion</h2>
             <hr class="section-divider">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi at cum deleniti est necessitatibus officiis quisquam tempore! Expedita, fugiat.</p>
         </div><!--project-section-title-->
@@ -79,9 +79,6 @@ get_header(); ?>
         <div class="col-lg-6">
             <div class="mb-5 skillset-description">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquid aut autem beatae cupiditate deserunt dicta dignissimos ducimus eligendi exercitationem fuga harum hic id incidunt molestiae, nobis nostrum optio porro quae quaerat recusandae repudiandae sapiente soluta tempore velit voluptatum. Et ipsam molestiae molestias, nam porro qui quos sunt unde.</p>
-            </div>
-            <div class="skillset_btn">
-                <a class="btn btn-link btn-line">View My Work</a>
             </div>
         </div>
         <div class="col-lg-6">
